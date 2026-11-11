@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>V1 · Preparación Integral · Ortografía, Psicometría y Pruebas Bancarias RD</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="cabecera-principal">
+    <div class="contenedor cabecera-interior">
+      <div class="marca">
+        <div class="marca-icono" aria-hidden="true">
+          <svg viewBox="0 0 36 36" width="34" height="34" fill="none">
+            <rect x="2" y="2" width="32" height="32" rx="9" fill="#10b981" fill-opacity="0.18" stroke="#34d399" stroke-width="1.8"/>
+            <path d="M10 25L18 9L26 25M13 20H23" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="26.5" cy="10.5" r="2.5" fill="#fbbf24"/>
+          </svg>
+        </div>
+        <div>
+          <h1 class="marca-titulo">Evaluación Corporativa y Bancaria RD <span class="insignia-v1" title="Versión 1 para evaluación">V1</span></h1>
+          <p class="marca-subtitulo">Ortografía RAE · Correos · Psicometría · Pruebas Psicológicas · Edición V1</p>
+        </div>
+      </div>
+      <div class="resumen-cabecera" id="resumen-cabecera">
+        <span class="insignia-cabecera" id="hdr-precision">Precisión: —</span>
+        <span class="insignia-cabecera insignia-ambar" id="hdr-errores-pendientes">Errores por repasar: 0</span>
+        <button type="button" class="btn-evaluar-v1" id="btn-abrir-feedback-v1">Comentarios V1</button>
+      </div>
+    </div>
+
+    <nav class="nav-principal" aria-label="Secciones principales">
+      <div class="contenedor nav-lista" id="nav-pestanas">
+        <button type="button" class="nav-btn activo" id="tab-aprende" data-vista="aprende">
+          <span class="nav-num">1</span> Aprende
+        </button>
+        <button type="button" class="nav-btn" id="tab-ortografia" data-vista="ortografia">
+          <span class="nav-num">2</span> Practica ortografía
+        </button>
+        <button type="button" class="nav-btn" id="tab-psicometria" data-vista="psicometria">
+          <span class="nav-num">3</span> Psicométricas
+        </button>
+        <button type="button" class="nav-btn" id="tab-psicologia" data-vista="psicologia">
+          <span class="nav-num">4</span> Psicológicas
+        </button>
+        <button type="button" class="nav-btn" id="tab-progreso" data-vista="progreso">
+          <span class="nav-num">5</span> Mi progreso
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contenedor contenido-principal">
+    <!-- =====================================================
+         1. PESTAÑA APRENDE
+         ===================================================== -->
+    <section id="vista-aprende" class="vista activa" aria-labelledby="tab-aprende">
+      <div class="hero-seccion">
+        <div>
+          <span class="etiqueta-seccion">Norma RAE (2010) · Contexto Corporativo RD</span>
+          <h2>Reglas ortográficas, trucos de memoria y redacción ejecutiva</h2>
+          <p>Consulta cualquier duda al instante: el buscador revisa tanto las 12 guías prácticas como las más de 450 palabras, oraciones y avenidas dominicanas del banco.</p>
+        </div>
+        <div class="buscador-caja">
+          <label for="input-buscar-dudas" class="sr-only">Buscar palabra, avenida o regla ortográfica</label>
+          <input type="search" id="input-buscar-dudas" class="input-buscador" placeholder="Ej.: envío, guion, haya, Kennedy, sino, transacción, tilde…" autocomplete="off">
+          <button type="button" id="btn-limpiar-busqueda" class="btn btn-secundario btn-pequeno oculto">Limpiar</button>
+        </div>
+      </div>
+
+      <div id="resultados-banco-dudas" class="panel-resultados-dudas oculto"></div>
+
+      <div class="filtros-temas" id="filtros-guias"></div>
+      <div class="rejilla-guias" id="contenedor-guias"></div>
+
+      <div class="tarjeta plantilla-correo-modelo">
+        <div class="plantilla-encabezado">
+          <span class="etiqueta-seccion">Modelo de referencia</span>
+          <h3>Anatomía de un correo corporativo impecable</h3>
+          <p>Observa cómo se combinan puntuación del saludo, minúsculas en días y meses, hiatos acentuados y despedida formal.</p>
+        </div>
+        <div class="correo-ejemplo-caja">
+          <div class="correo-ejemplo-linea"><strong>Asunto:</strong> Remisión de análisis trimestral y conciliación de marzo — Sucursal Piantini <span class="nota-regla">Sin punto final; «análisis» y «conciliación» con tilde; «marzo» en minúscula</span></div>
+          <div class="correo-ejemplo-cuerpo">
+            <p><strong>Estimada licenciada Henríquez:</strong> <span class="nota-regla">Cargo en minúscula y dos puntos (:), nunca coma</span></p>
+            <p>A través de este medio le envío el resumen ejecutivo correspondiente al cierre del jueves 26 de marzo. Ahí encontrará detalladas las tasas del 11.5 % aplicadas a la cartera comercial, sin que haya quedado ninguna transacción pendiente de firma. <span class="nota-regla">«A través» separado; «envío» y «ahí» con tilde; «resumen» sin tilde; espacio antes de «%»; «haya» con y</span></p>
+            <p>Vamos a ver mañana a las 9:30 a. m. los indicadores del próximo trimestre; si no surge ningún inconveniente, remitiremos el acta definitiva antes del mediodía. <span class="nota-regla">«a ver» = revisemos; «a. m.» con puntos y espacio; «si no» separado condicional</span></p>
+            <p><strong>Saludos cordiales,</strong> <span class="nota-regla">Solo mayúscula en la primera palabra</span><br>Departamento de Operaciones Bancarias</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         2. PESTAÑA PRACTICA ORTOGRAFÍA
+         ===================================================== -->
+    <section id="vista-ortografia" class="vista" aria-labelledby="tab-ortografia">
+      <div class="barra-submodos" id="submodos-ortografia">
+        <button type="button" class="submodo-btn activo" data-submodo="categorias">Por categoría (11)</button>
+        <button type="button" class="submodo-btn" data-submodo="examen">Examen 40 preg. / 30 min</button>
+        <button type="button" class="submodo-btn" data-submodo="correos">Detecta errores en el correo (28)</button>
+        <button type="button" class="submodo-btn" data-submodo="dictado">Escritura en contexto</button>
+        <button type="button" class="submodo-btn" data-submodo="errores">Repaso de mis errores <span class="contador-pill" id="pill-errores-orto">0</span></button>
+      </div>
+
+      <!-- Subvista 2A: Selector de categorías -->
+      <div id="orto-panel-categorias" class="subpanel-orto">
+        <div class="cabecera-bloque">
+          <div>
+            <h2>Práctica focalizada por categoría ortográfica</h2>
+            <p>Elige una categoría y la cantidad de ejercicios. Recibirás explicación inmediata de la regla en cada pregunta.</p>
+          </div>
+          <div class="control-cantidad">
+            <label for="select-cantidad-orto">Preguntas por sesión:</label>
+            <select id="select-cantidad-orto" class="select-control">
+              <option value="10">10 preguntas</option>
+              <option value="20" selected>20 preguntas</option>
+              <option value="35">35 preguntas</option>
+              <option value="todas">Todas las de la categoría</option>
+            </select>
+          </div>
+        </div>
+        <div class="rejilla-categorias" id="rejilla-categorias-orto"></div>
+      </div>
+
+      <!-- Subvista 2B: Presentación Examen Cronometrado 40 preguntas -->
+      <div id="orto-panel-examen-intro" class="subpanel-orto oculto">
+        <div class="tarjeta tarjeta-destacada">
+          <span class="etiqueta-seccion">Simulacro oficial de admisión</span>
+          <h2>Examen Cronometrado de Ortografía Corporativa</h2>
+          <p>Selecciona al azar <strong>40 preguntas equilibradas</strong> entre las 11 categorías (tildes, diacrítica, B/V, C/S/Z, H, LL/Y, G/J, C/Q/K, homófonos, redacción de correos y calles de República Dominicana).</p>
+          <ul class="lista-detalles-examen">
+            <li><strong>Tiempo límite:</strong> 30 minutos con reloj regresivo visible.</li>
+            <li><strong>Navegación libre:</strong> Puedes avanzar, retroceder y marcar preguntas dudosas antes de entregar.</li>
+            <li><strong>Registro inteligente:</strong> El resultado se guarda en tu historial y los fallos pasan automáticamente a tu lista de repaso.</li>
+          </ul>
+          <div class="acciones-fila">
+            <button type="button" id="btn-iniciar-examen-orto" class="btn btn-primario btn-grande">Comenzar examen (30:00 min)</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subvista 2C: Detecta los errores en el correo -->
+      <div id="orto-panel-correos" class="subpanel-orto oculto">
+        <div class="cabecera-bloque">
+          <div>
+            <h2>Detecta los errores en el correo corporativo</h2>
+            <p>Haz clic directamente sobre cada palabra mal escrita en el <strong>asunto</strong> o en el <strong>cuerpo</strong> del mensaje. ¡Cuidado!: hacer clic en palabras correctas cuenta como falso positivo.</p>
+          </div>
+          <div class="acciones-fila">
+            <button type="button" id="btn-quiz-parrafos-correo" class="btn btn-secundario">Test de párrafos (16 preg.)</button>
+          </div>
+        </div>
+
+        <div class="layout-correos">
+          <aside class="lista-correos-lateral" id="lista-correos-selector" aria-label="Lista de correos"></aside>
+          <div class="visor-correo-contenedor">
+            <div class="barra-estado-correo" id="barra-estado-correo">
+              <span id="correo-indice-actual" class="texto-fuerte">Correo 1 de 28</span>
+              <span id="correo-marcadas-contador" class="insignia-estado">Palabras marcadas: 0</span>
+              <div class="acciones-correo-top">
+                <button type="button" id="btn-limpiar-marcas-correo" class="btn btn-texto">Desmarcar todo</button>
+                <button type="button" id="btn-verificar-correo" class="btn btn-primario">Verificar correo</button>
+              </div>
+            </div>
+
+            <article class="ventana-correo" id="ventana-correo-interactivo">
+              <div class="correo-metadatos">
+                <div class="correo-meta-fila"><span class="meta-etiqueta">Categoría:</span> <span id="correo-cat"></span></div>
+                <div class="correo-meta-fila"><span class="meta-etiqueta">De:</span> <span id="correo-de"></span></div>
+                <div class="correo-meta-fila"><span class="meta-etiqueta">Para:</span> <span id="correo-para"></span></div>
+                <div class="correo-meta-fila"><span class="meta-etiqueta">Fecha:</span> <span id="correo-fecha"></span></div>
+                <div class="correo-meta-fila correo-asunto-fila">
+                  <span class="meta-etiqueta">Asunto:</span>
+                  <div id="correo-asunto-tokens" class="zona-clicable-correo"></div>
+                </div>
+              </div>
+              <div id="correo-cuerpo-tokens" class="correo-cuerpo-interactivo zona-clicable-correo"></div>
+            </article>
+
+            <div id="correo-retroalimentacion" class="tarjeta-retro-correo oculto"></div>
+
+            <div class="navegacion-entre-correos">
+              <button type="button" id="btn-correo-anterior" class="btn btn-secundario">← Correo anterior</button>
+              <button type="button" id="btn-correo-reintentar" class="btn btn-secundario oculto">Reintentar este correo</button>
+              <button type="button" id="btn-correo-siguiente" class="btn btn-primario">Siguiente correo →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subvista 2D: Escritura / Dictado en contexto -->
+      <div id="orto-panel-dictado" class="subpanel-orto oculto">
+        <div class="tarjeta">
+          <div class="cabecera-bloque">
+            <div>
+              <span class="etiqueta-seccion">Precisión al escribir con teclado</span>
+              <h2>Escritura y corrección exacta en contexto</h2>
+              <p>Corrige el borrador con error o completa la oración escribiendo la palabra o expresión exacta con todas sus tildes y mayúsculas.</p>
+            </div>
+            <div class="acciones-fila">
+              <label for="select-cat-dictado" class="sr-only">Categoría de escritura</label>
+              <select id="select-cat-dictado" class="select-control"></select>
+              <button type="button" id="btn-nuevo-lote-dictado" class="btn btn-secundario">Nueva tanda (15)</button>
+            </div>
+          </div>
+
+          <div id="zona-ejercicio-dictado">
+            <div class="progreso-linea-cabecera">
+              <span id="dictado-progreso-txt">Ejercicio 1 de 15</span>
+              <span id="dictado-aciertos-txt" class="insignia-exito">Aciertos: 0</span>
+            </div>
+            <div class="barra-progreso-fondo"><div id="dictado-barra" class="barra-progreso-relleno" style="width:0%"></div></div>
+
+            <div class="caja-consigna-dictado">
+              <span class="insignia-cat" id="dictado-categoria-badge">Categoría</span>
+              <p class="consigna-instruccion" id="dictado-instruccion"></p>
+              <div class="consigna-frase" id="dictado-frase"></div>
+              <div class="consigna-borrador" id="dictado-borrador"></div>
+            </div>
+
+            <div class="teclado-tildes" id="teclado-tildes-dictado" aria-label="Insertar caracteres especiales">
+              <span class="teclado-etiqueta">Insertar:</span>
+              <button type="button" class="tecla-tilde" data-char="á">á</button>
+              <button type="button" class="tecla-tilde" data-char="é">é</button>
+              <button type="button" class="tecla-tilde" data-char="í">í</button>
+              <button type="button" class="tecla-tilde" data-char="ó">ó</button>
+              <button type="button" class="tecla-tilde" data-char="ú">ú</button>
+              <button type="button" class="tecla-tilde" data-char="ü">ü</button>
+              <button type="button" class="tecla-tilde" data-char="ñ">ñ</button>
+              <button type="button" class="tecla-tilde" data-char="Á">Á</button>
+              <button type="button" class="tecla-tilde" data-char="É">É</button>
+              <button type="button" class="tecla-tilde" data-char="Í">Í</button>
+              <button type="button" class="tecla-tilde" data-char="Ó">Ó</button>
+              <button type="button" class="tecla-tilde" data-char="Ú">Ú</button>
+              <button type="button" class="tecla-tilde" data-char="¿">¿</button>
+              <button type="button" class="tecla-tilde" data-char="¡">¡</button>
+            </div>
+
+            <form id="form-dictado" class="fila-entrada-dictado" autocomplete="off">
+              <input type="text" id="input-respuesta-dictado" class="input-dictado" placeholder="Escribe aquí la forma correcta…" spellcheck="false" autocomplete="off">
+              <button type="button" id="btn-pista-dictado" class="btn btn-secundario">Ver pista</button>
+              <button type="submit" id="btn-comprobar-dictado" class="btn btn-primario">Comprobar</button>
+              <button type="button" id="btn-siguiente-dictado" class="btn btn-primario oculto">Siguiente →</button>
+            </form>
+            <div id="dictado-pista-caja" class="pista-dictado oculto"></div>
+            <div id="dictado-feedback" class="feedback-caja oculto"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subvista 2E: Repaso de mis errores -->
+      <div id="orto-panel-errores" class="subpanel-orto oculto">
+        <div class="tarjeta">
+          <div class="cabecera-bloque">
+            <div>
+              <h2>Repaso inteligente de mis errores guardados</h2>
+              <p>Cada vez que fallas una palabra u oración en práctica, examen, escritura o correos, se guarda aquí automáticamente para reforzarla hasta dominarla.</p>
+            </div>
+            <div class="acciones-fila">
+              <button type="button" id="btn-practicar-errores" class="btn btn-primario">Practicar mis errores ahora</button>
+              <button type="button" id="btn-limpiar-errores-guardados" class="btn btn-secundario">Vaciar lista</button>
+            </div>
+          </div>
+          <div id="contenedor-lista-errores"></div>
+        </div>
+      </div>
+
+      <!-- Motor compartido de cuestionario de ortografía (práctica y examen 40 preg.) -->
+      <div id="orto-motor-quiz" class="motor-quiz oculto"></div>
+    </section>
+
+    <!-- =====================================================
+         3. PESTAÑA PSICOMÉTRICAS
+         ===================================================== -->
+    <section id="vista-psicometria" class="vista" aria-labelledby="tab-psicometria">
+      <div id="psico-inicio">
+        <div class="hero-seccion">
+          <div>
+            <span class="etiqueta-seccion">120 preguntas únicas · 5 aptitudes clave</span>
+            <h2>Pruebas Psicométricas para Bancos y Empresas en RD</h2>
+            <p>Practica con <strong>4 simulacros cronometrados completos de 30 preguntas</strong> cada uno o entrena sin reloj por habilidad específica (incluyendo matrices SVG, dados, divisas RD$/US$, cuadre de caja y verificación de cédulas y RNC).</p>
+          </div>
+        </div>
+
+        <h3 class="subtitulo-bloque">Exámenes completos cronometrados (30 preguntas cada uno)</h3>
+        <div class="rejilla-examenes-psico" id="rejilla-examenes-psico"></div>
+
+        <h3 class="subtitulo-bloque">Práctica guiada por habilidad (con explicación inmediata)</h3>
+        <div class="rejilla-habilidades-psico" id="rejilla-habilidades-psico"></div>
+      </div>
+
+      <div id="psico-motor-quiz" class="motor-quiz oculto"></div>
+    </section>
+
+    <!-- =====================================================
+         4. PESTAÑA PSICOLÓGICAS
+         ===================================================== -->
+    <section id="vista-psicologia" class="vista" aria-labelledby="tab-psicologia">
+      <div class="barra-submodos" id="submodos-psicologia">
+        <button type="button" class="submodo-btn activo" data-subpsico="guia">Guía de pruebas (DISC, Wartegg, 16PF)</button>
+        <button type="button" class="submodo-btn" data-subpsico="simulador">Simulador de perfil laboral (24 ítems)</button>
+        <button type="button" class="submodo-btn" data-subpsico="situacional">Juicio Situacional Bancario (28)</button>
+        <button type="button" class="submodo-btn" data-subpsico="entrevista">Guía de entrevista STAR</button>
+      </div>
+
+      <!-- 4A: Guía de pruebas y Wartegg interactivo -->
+      <div id="psicologia-panel-guia" class="subpanel-psicologia">
+        <div class="rejilla-guias" id="contenedor-guia-psicologia"></div>
+
+        <div class="tarjeta bloque-wartegg">
+          <span class="etiqueta-seccion">Referencia gráfica interactiva</span>
+          <h3>Los 8 campos del Test de Wartegg: qué evalúa cada cuadro</h3>
+          <p>Haz clic en cualquiera de los 8 recuadros para ver el significado de su estímulo inicial, su naturaleza (orgánica o inorgánica) y cómo integrarlo con limpieza.</p>
+          <div class="layout-wartegg">
+            <div class="rejilla-wartegg" id="rejilla-wartegg"></div>
+            <div class="detalle-wartegg" id="detalle-wartegg"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4B: Simulador DISC + Big Five -->
+      <div id="psicologia-panel-simulador" class="subpanel-psicologia oculto">
+        <div class="tarjeta">
+          <div class="cabecera-bloque">
+            <div>
+              <span class="etiqueta-seccion">Autoevaluación orientativa</span>
+              <h2>Simulador de Perfil Laboral (DISC + Cinco Grandes)</h2>
+              <p id="simulador-instrucciones"></p>
+            </div>
+            <button type="button" id="btn-reiniciar-simulador" class="btn btn-secundario">Reiniciar respuestas</button>
+          </div>
+          <div id="contenedor-items-simulador" class="lista-items-simulador"></div>
+          <div class="acciones-fila acciones-centradas">
+            <button type="button" id="btn-calcular-perfil" class="btn btn-primario btn-grande">Obtener mi perfil laboral</button>
+          </div>
+          <div id="aviso-simulador-incompleto" class="alerta-inline oculto"></div>
+          <div id="resultado-simulador-perfil" class="resultado-perfil-caja oculto"></div>
+        </div>
+      </div>
+
+      <!-- 4C: Juicio Situacional Bancario -->
+      <div id="psicologia-panel-situacional" class="subpanel-psicologia oculto">
+        <div id="situacional-intro" class="tarjeta">
+          <span class="etiqueta-seccion">Ética, PLAFT, Secreto Bancario y Servicio</span>
+          <h2>Banco de Juicio Situacional Bancario y Corporativo</h2>
+          <p>Evalúa tu criterio profesional ante <strong>28 dilemas reales</strong> de sucursal y oficina corporativa: confidencialidad de cuentas, prevención de lavado de activos (Ley 155-17), conflicto de intereses, clientes molestos, arqueo de caja y pases de QA.</p>
+          <div class="acciones-fila">
+            <button type="button" id="btn-situacional-todos" class="btn btn-primario">Practicar los 28 casos completos</button>
+            <button type="button" id="btn-situacional-corto" class="btn btn-secundario">Simulacro rápido (15 casos al azar)</button>
+          </div>
+        </div>
+        <div id="situacional-motor-quiz" class="motor-quiz oculto"></div>
+      </div>
+
+      <!-- 4D: Guía de Entrevista STAR -->
+      <div id="psicologia-panel-entrevista" class="subpanel-psicologia oculto">
+        <div class="tarjeta">
+          <span class="etiqueta-seccion">Preparación para RR. HH. y Gerencia</span>
+          <h2>Estructura STAR y preguntas clave de entrevista bancaria</h2>
+          <p>Las entrevistas por competencias buscan evidencias reales de cómo actuaste en el pasado para predecir cómo actuarás en el puesto.</p>
+          <div class="rejilla-star" id="contenedor-pasos-star"></div>
+        </div>
+        <div class="lista-acordeon-entrevista" id="contenedor-preguntas-entrevista"></div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         5. PESTAÑA MI PROGRESO
+         ===================================================== -->
+    <section id="vista-progreso" class="vista" aria-labelledby="tab-progreso">
+      <div class="hero-seccion">
+        <div>
+          <span class="etiqueta-seccion">Guardado automático local</span>
+          <h2>Mi panel de progreso y dominio</h2>
+          <p>Tus estadísticas, simulacros y palabras por reforzar se conservan en este navegador (<code>localStorage</code>) sin necesidad de internet.</p>
+        </div>
+        <div class="acciones-fila" id="zona-reset-progreso">
+          <button type="button" id="btn-pedir-reset" class="btn btn-peligro-suave">Reiniciar todo el progreso</button>
+          <div id="confirmacion-reset-caja" class="confirmacion-inline oculto">
+            <span>¿Borrar estadísticas e historial?</span>
+            <button type="button" id="btn-confirmar-reset" class="btn btn-peligro btn-pequeno">Sí, borrar</button>
+            <button type="button" id="btn-cancelar-reset" class="btn btn-secundario btn-pequeno">Cancelar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="rejilla-kpis" id="contenedor-kpis-progreso"></div>
+
+      <div class="rejilla-dos-columnas">
+        <div class="tarjeta">
+          <h3>Dominio por categoría ortográfica (11)</h3>
+          <div id="barras-progreso-orto" class="lista-barras-dominio"></div>
+        </div>
+        <div class="tarjeta">
+          <h3>Dominio por habilidad psicométrica (5)</h3>
+          <div id="barras-progreso-psico" class="lista-barras-dominio"></div>
+          <div id="resumen-perfil-guardado" class="resumen-perfil-mini"></div>
+        </div>
+      </div>
+
+      <div class="rejilla-dos-columnas">
+        <div class="tarjeta">
+          <div class="cabecera-bloque-compacta">
+            <h3>Palabras y reglas por reforzar</h3>
+            <button type="button" id="btn-ir-repaso-desde-progreso" class="btn btn-primario btn-pequeno">Practicar errores</button>
+          </div>
+          <div id="progreso-lista-palabras-falladas"></div>
+        </div>
+        <div class="tarjeta">
+          <h3>Historial reciente de simulacros</h3>
+          <div id="progreso-tabla-historial"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="contenedor pie-interior">
+      <p><strong>Versión V1</strong> · Plataforma de Estudio Autónoma · Ortografía verificada conforme a la RAE (2010) · <button type="button" class="enlace-pie-v1" id="btn-abrir-feedback-pie">Dejar comentarios de evaluación (V1)</button></p>
+    </div>
+  </footer>
+
+  <!-- Modal de evaluación y comentarios para la Versión 1 (V1) -->
+  <div id="modal-feedback-v1" class="modal-v1-fondo oculto" role="dialog" aria-modal="true" aria-labelledby="titulo-modal-v1">
+    <div class="modal-v1-caja">
+      <div class="modal-v1-cabecera">
+        <div>
+          <span class="insignia-v1">V1</span>
+          <h2 id="titulo-modal-v1" style="display:inline;margin-left:0.5rem;font-size:1.2rem;">Evaluación y comentarios de revisión (V1)</h2>
+        </div>
+        <button type="button" id="btn-cerrar-feedback-v1" class="btn-cerrar-modal-v1" aria-label="Cerrar">✕</button>
+      </div>
+      <p class="modal-v1-intro">Escribe aquí tus observaciones al revisar la <strong>Versión 1 (V1)</strong>. Se guardan automáticamente en este navegador y puedes copiarlas o descargarlas al terminar.</p>
+      <div class="modal-v1-campos">
+        <div class="fila-v1-doble">
+          <div>
+            <label for="fb-v1-autor">Evaluador / Revisor:</label>
+            <input type="text" id="fb-v1-autor" class="input-v1" placeholder="Tu nombre (opcional)">
+          </div>
+          <div>
+            <label for="fb-v1-calificacion">Valoración general de la V1:</label>
+            <select id="fb-v1-calificacion" class="input-v1">
+              <option value="5/5 - Excelente">★★★★★ (5/5) — Excelente</option>
+              <option value="4/5 - Muy buena, con ajustes menores">★★★★☆ (4/5) — Muy buena, con ajustes menores</option>
+              <option value="3/5 - Buena base, requiere mejoras">★★★☆☆ (3/5) — Buena base, requiere mejoras</option>
+              <option value="2/5 - Requiere bastantes cambios">★★☆☆☆ (2/5) — Requiere bastantes cambios</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label for="fb-v1-ortografia">Comentarios sobre Ortografía, Reglas y Correos Corporativos:</label>
+          <textarea id="fb-v1-ortografia" class="textarea-v1" rows="2" placeholder="Ej.: palabras adicionales a incluir, dificultad de los correos, calles de RD..."></textarea>
+        </div>
+        <div>
+          <label for="fb-v1-psico">Comentarios sobre Pruebas Psicométricas y Psicológicas:</label>
+          <textarea id="fb-v1-psico" class="textarea-v1" rows="2" placeholder="Ej.: ejercicios numéricos, figuras, dados, casos situacionales..."></textarea>
+        </div>
+        <div>
+          <label for="fb-v1-general">Sugerencias de diseño o mejoras para la siguiente versión (V2):</label>
+          <textarea id="fb-v1-general" class="textarea-v1" rows="2" placeholder="Ej.: colores, botones, funciones nuevas o correcciones..."></textarea>
+        </div>
+      </div>
+      <div id="fb-v1-aviso" class="fb-v1-aviso oculto"></div>
+      <div class="modal-v1-acciones">
+        <button type="button" id="btn-copiar-feedback-v1" class="btn btn-primario">Copiar comentarios (WhatsApp / Correo)</button>
+        <button type="button" id="btn-descargar-feedback-v1" class="btn btn-secundario">Descargar .txt</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="datos-ortografia.js"></script>
+  <script src="datos-correos.js"></script>
+  <script src="datos-psicometria.js"></script>
+  <script src="datos-psicologia.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
