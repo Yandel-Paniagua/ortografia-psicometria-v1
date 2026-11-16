@@ -15,7 +15,7 @@ var CATEGORIAS_PSICO = [
   {
     id: "numerico",
     nombre: "Razonamiento numérico",
-    descripcion: "Series numéricas, porcentajes, comisiones, interés simple, divisas RD$/US$ y cuadre de caja."
+    descripcion: "Series numéricas, porcentajes, comisiones, interés simple, divisas RD$/US$ y cuadre de caja. Todo sale a mano, sin calculadora."
   },
   {
     id: "abstracto",
@@ -307,7 +307,7 @@ var EXAMENES_PSICO = [
         enunciado: "¿Qué número continúa la siguiente serie numérica?: 4, 9, 19, 39, 79, ___",
         opciones: ["149", "158", "159", "161"],
         correcta: 2,
-        explicacion: "En cada paso se multiplica por 2 y se suma 1: (4×2)+1 = 9; (9×2)+1 = 19; (19×2)+1 = 39; (39×2)+1 = 79; (79×2)+1 = 159."
+        explicacion: "En cada paso se multiplica por 2 y se suma 1: (4×2)+1 = 9; (9×2)+1 = 19; (19×2)+1 = 39; (39×2)+1 = 79; (79×2)+1 = 159. A mano, sin calculadora: duplica y suma 1 cada vez: 79 + 79 = 158, más 1 = 159."
       },
       {
         id: "e1-08",
@@ -315,7 +315,7 @@ var EXAMENES_PSICO = [
         enunciado: "Un cliente compra US$ 1,250.00 en ventanilla a una tasa de venta de RD$ 59.40 por dólar. ¿Cuántos pesos dominicanos debe entregar exactamente?",
         opciones: ["RD$ 73,750.00", "RD$ 74,250.00", "RD$ 74,500.00", "RD$ 75,150.00"],
         correcta: 1,
-        explicacion: "Se multiplica la cantidad en dólares por la tasa de venta: 1,250 × 59.40 = 74,250 pesos dominicanos (RD$ 74,250.00)."
+        explicacion: "Se multiplica la cantidad en dólares por la tasa de venta: 1,250 × 59.40 = 74,250 pesos dominicanos (RD$ 74,250.00). A mano, sin calculadora: redondea la tasa a 60. 1,250 × 60 = 75,000; como la tasa real es 0.60 menos, resta 1,250 × 0.60 = 750. Queda 75,000 − 750 = 74,250."
       },
       {
         id: "e1-09",
@@ -323,7 +323,7 @@ var EXAMENES_PSICO = [
         enunciado: "Un certificado financiero de RD$ 200,000.00 paga una tasa de interés simple anual del 9 %. ¿Cuánto interés bruto genera al cabo de 8 meses?",
         opciones: ["RD$ 10,800.00", "RD$ 12,000.00", "RD$ 14,400.00", "RD$ 18,000.00"],
         correcta: 1,
-        explicacion: "Interés anual = 200,000 × 0.09 = RD$ 18,000. En 8 meses (8/12 = 2/3 de año) genera: 18,000 × (8 / 12) = RD$ 12,000.00."
+        explicacion: "Interés anual = 200,000 × 0.09 = RD$ 18,000. En 8 meses (8/12 = 2/3 de año) genera: 18,000 × (8 / 12) = RD$ 12,000.00. A mano, sin calculadora: el 9 % de 200,000 es 18,000 (9 × 2,000). Ocho meses son dos tercios del año: 18,000 ÷ 3 = 6,000 y 6,000 × 2 = 12,000."
       },
       {
         id: "e1-10",
@@ -336,7 +336,7 @@ var EXAMENES_PSICO = [
           "Faltante de RD$ 300.00"
         ],
         correcta: 2,
-        explicacion: "Saldo teórico en caja = 50,000 + 185,400 − 142,900 = RD$ 92,500.00. Como el efectivo físico contado es RD$ 92,300.00, falta RD$ 200.00."
+        explicacion: "Saldo teórico en caja = 50,000 + 185,400 − 142,900 = RD$ 92,500.00. Como el efectivo físico contado es RD$ 92,300.00, falta RD$ 200.00. A mano, sin calculadora: 50,000 + 185,400 = 235,400; 235,400 − 142,900 = 92,500. Compara con lo contado: 92,500 − 92,300 = 200 que faltan."
       },
       {
         id: "e1-11",
@@ -344,7 +344,7 @@ var EXAMENES_PSICO = [
         enunciado: "Una transferencia empresarial de RD$ 480,000.00 tiene una comisión tarifaria del 0.5 %, pero el cliente goza de un 20 % de descuento sobre dicha comisión. ¿Cuánto paga de comisión?",
         opciones: ["RD$ 1,920.00", "RD$ 2,000.00", "RD$ 2,160.00", "RD$ 2,400.00"],
         correcta: 0,
-        explicacion: "Comisión base = 480,000 × 0.005 = RD$ 2,400.00. Aplicando el 20 % de descuento (paga el 80 %): 2,400 × 0.80 = RD$ 1,920.00."
+        explicacion: "Comisión base = 480,000 × 0.005 = RD$ 2,400.00. Aplicando el 20 % de descuento (paga el 80 %): 2,400 × 0.80 = RD$ 1,920.00. A mano, sin calculadora: el 1 % de 480,000 es 4,800, así que el 0.5 % es la mitad: 2,400. El 20 % de 2,400 es 480 (el 10 % es 240, por dos). 2,400 − 480 = 1,920."
       },
       {
         id: "e1-12",
@@ -352,7 +352,7 @@ var EXAMENES_PSICO = [
         enunciado: "De un presupuesto trimestral de RD$ 360,000.00, un departamento asigna 45 % a licencias, 30 % a capacitación y el resto a fondo de imprevistos. ¿Cuánto queda para imprevistos?",
         opciones: ["RD$ 72,000.00", "RD$ 85,000.00", "RD$ 90,000.00", "RD$ 108,000.00"],
         correcta: 2,
-        explicacion: "El porcentaje asignado suma 45 % + 30 % = 75 %, por lo que resta un 25 % para imprevistos: 360,000 × 0.25 = RD$ 90,000.00."
+        explicacion: "El porcentaje asignado suma 45 % + 30 % = 75 %, por lo que resta un 25 % para imprevistos: 360,000 × 0.25 = RD$ 90,000.00. A mano, sin calculadora: 45 + 30 = 75; sobra el 25 %, que es la cuarta parte: 360,000 ÷ 4 = 90,000."
       },
 
       /* --- ABSTRACTO Y ESPACIAL CON SVG (6) --- */
@@ -399,7 +399,7 @@ var EXAMENES_PSICO = [
       {
         id: "e1-15",
         cat: "abstracto",
-        enunciado: "En un dado estándar las caras opuestas siempre suman 7. Si la cara superior de estos tres dados sigue la serie mostrada, ¿qué valor tendrá la cara INFERIOR (oculta) del quinto dado?",
+        enunciado: "En un dado estándar las caras opuestas siempre suman 7. Si la cara superior de estos dados sigue la serie mostrada, ¿qué valor tendrá la cara INFERIOR (oculta) del quinto dado?",
         figuraHtml: FIG_PSICO.serie([
           FIG_PSICO.dado(1, 56),
           FIG_PSICO.dado(3, 56),
@@ -506,6 +506,7 @@ var EXAMENES_PSICO = [
         cat: "logico",
         enunciado: "Cuatro analistas (Elena, Félix, Gabriela y Héctor) ocupan cuatro oficinas contiguas numeradas en fila del 1 al 4. Elena ocupa la oficina 1, Félix ocupa la oficina 4 y Gabriela trabaja exactamente entre las oficinas de Héctor y Félix. ¿En qué oficina está Gabriela?",
         opciones: ["Oficina 1", "Oficina 2", "Oficina 3", "Oficina 4"],
+        ordenFijo: true,
         correcta: 2,
         explicacion: "Con Elena en la 1 y Félix en la 4, quedan las oficinas 2 y 3 para Héctor y Gabriela. Para que Gabriela esté exactamente entre Héctor y Félix (4), Héctor debe ocupar la 2 y Gabriela la oficina 3."
       },
@@ -538,7 +539,7 @@ var EXAMENES_PSICO = [
         enunciado: "Compare la cédula original con las cuatro opciones y elija la que es IDÉNTICA carácter por carácter:\nOriginal:  001-1849207-5",
         opciones: ["001-1849270-5", "001-1894207-5", "001-1849207-5", "001-1849207-6"],
         correcta: 2,
-        explicacion: "La tercera opción (001-1849207-5) coincide dígito por dígito con el original; las demás invierten «07/70», «84/89» o cambian el dígito verificador final."
+        explicacion: "La opción idéntica es «001-1849207-5»: coincide dígito por dígito con el original. Las demás invierten «07» por «70», invierten «49» por «94» o cambian el dígito verificador final (5 por 6)."
       },
       {
         id: "e1-26",
@@ -564,7 +565,7 @@ var EXAMENES_PSICO = [
           "Ninguna coincide con el patrón"
         ],
         correcta: 1,
-        explicacion: "En la segunda opción («BDOMD0SX-2026-88419-QA») se sustituyó la letra «O» mayúscula por el número cero «0» en «D0SX»."
+        explicacion: "En la referencia «BDOMD0SX-2026-88419-QA» se sustituyó la letra «O» mayúscula por el número cero «0» (en «D0SX»); la otra referencia sí es idéntica al patrón."
       },
       {
         id: "e1-28",
@@ -585,7 +586,7 @@ var EXAMENES_PSICO = [
           "INVERCIONES DEL CARIBE, S. R. L. — 240-0098716-4"
         ],
         correcta: 2,
-        explicacion: "La tercera opción reproduce con exactitud la ortografía («INVERSIONES»), el tipo societario («S. R. L.») y el número de cuenta («240-0098716-4»)."
+        explicacion: "La opción correcta reproduce con exactitud la ortografía («INVERSIONES», con s), el tipo societario («S. R. L.») y el número de cuenta («240-0098716-4»). Las otras cambian «16» por «61», «S. R. L.» por «S. A. S.» o escriben «INVERCIONES»."
       },
       {
         id: "e1-30",
@@ -669,7 +670,7 @@ var EXAMENES_PSICO = [
         enunciado: "Determine el número que sigue en la sucesión: 120, 115, 105, 90, 70, ___",
         opciones: ["50", "45", "40", "35"],
         correcta: 1,
-        explicacion: "Las restas aumentan de 5 en 5 en cada paso: −5, −10, −15, −20; por tanto, sigue restar 25: 70 − 25 = 45."
+        explicacion: "Las restas aumentan de 5 en 5 en cada paso: −5, −10, −15, −20; por tanto, sigue restar 25: 70 − 25 = 45. A mano, sin calculadora: anota las restas entre un número y el siguiente (5, 10, 15, 20); la próxima es 25 y 70 − 25 = 45."
       },
       {
         id: "e2-08",
@@ -677,7 +678,7 @@ var EXAMENES_PSICO = [
         enunciado: "Una empresa dispone de RD$ 357,000.00 para comprar dólares estadounidenses cuando la tasa de venta es RD$ 59.50 por US$ 1.00. ¿Cuántos dólares exactos adquiere?",
         opciones: ["US$ 5,800.00", "US$ 5,950.00", "US$ 6,000.00", "US$ 6,050.00"],
         correcta: 2,
-        explicacion: "Se divide el monto en pesos entre la tasa de venta: 357,000 ÷ 59.50 = 6,000 dólares exactos (US$ 6,000.00)."
+        explicacion: "Se divide el monto en pesos entre la tasa de venta: 357,000 ÷ 59.50 = 6,000 dólares exactos (US$ 6,000.00). A mano, sin calculadora: no hace falta dividir; prueba las opciones multiplicando. 6,000 × 59.50 = 6,000 × 60 − 6,000 × 0.50 = 360,000 − 3,000 = 357,000, que es justo el monto disponible."
       },
       {
         id: "e2-09",
@@ -685,7 +686,7 @@ var EXAMENES_PSICO = [
         enunciado: "Un comercio toma un préstamo puente de RD$ 150,000.00 al 16 % de interés simple anual y lo salda por completo a los 6 meses. ¿Cuál es el monto total (capital más intereses) que paga al liquidarlo?",
         opciones: ["RD$ 158,000.00", "RD$ 162,000.00", "RD$ 166,000.00", "RD$ 174,000.00"],
         correcta: 1,
-        explicacion: "Interés de 6 meses (medio año) = 150,000 × 0.16 × 0.5 = RD$ 12,000.00. Capital + interés = 150,000 + 12,000 = RD$ 162,000.00."
+        explicacion: "Interés de 6 meses (medio año) = 150,000 × 0.16 × 0.5 = RD$ 12,000.00. Capital + interés = 150,000 + 12,000 = RD$ 162,000.00. A mano, sin calculadora: 16 % al año es 8 % en medio año. El 1 % de 150,000 es 1,500; por 8 da 12,000. 150,000 + 12,000 = 162,000."
       },
       {
         id: "e2-10",
@@ -693,7 +694,7 @@ var EXAMENES_PSICO = [
         enunciado: "En una remesa de bóveda se reciben 35 billetes de RD$ 2,000, 40 billetes de RD$ 1,000, 28 billetes de RD$ 500 y 15 billetes de RD$ 200. ¿Cuál es el valor total del efectivo?",
         opciones: ["RD$ 125,000.00", "RD$ 127,000.00", "RD$ 129,000.00", "RD$ 131,000.00"],
         correcta: 1,
-        explicacion: "Cálculo por denominación: (35×2,000 = 70,000) + (40×1,000 = 40,000) + (28×500 = 14,000) + (15×200 = 3,000) = RD$ 127,000.00."
+        explicacion: "Cálculo por denominación: (35×2,000 = 70,000) + (40×1,000 = 40,000) + (28×500 = 14,000) + (15×200 = 3,000) = RD$ 127,000.00. A mano, sin calculadora: multiplica cada grupo por separado y suma al final: 70,000 + 40,000 = 110,000; más 14,000 = 124,000; más 3,000 = 127,000."
       },
       {
         id: "e2-11",
@@ -701,7 +702,7 @@ var EXAMENES_PSICO = [
         enunciado: "La cartera en atraso de una agencia era de RD$ 500,000.00. En enero se redujo en un 20 % y en febrero disminuyó un 10 % adicional sobre el saldo de enero. ¿Cuál es el saldo resultante?",
         opciones: ["RD$ 350,000.00", "RD$ 360,000.00", "RD$ 370,000.00", "RD$ 380,000.00"],
         correcta: 1,
-        explicacion: "Tras enero queda el 80 %: 500,000 × 0.80 = RD$ 400,000.00. En febrero queda el 90 % de ese monto: 400,000 × 0.90 = RD$ 360,000.00 (no se suman directamente los porcentajes)."
+        explicacion: "Tras enero queda el 80 %: 500,000 × 0.80 = RD$ 400,000.00. En febrero queda el 90 % de ese monto: 400,000 × 0.90 = RD$ 360,000.00 (no se suman directamente los porcentajes). A mano, sin calculadora: el 20 % de 500,000 es 100,000 y quedan 400,000. El 10 % de 400,000 es 40,000 y quedan 360,000."
       },
       {
         id: "e2-12",
@@ -709,7 +710,7 @@ var EXAMENES_PSICO = [
         enunciado: "Si 4 oficiales de caja procesan 160 depósitos empresariales en 2 horas trabajando al mismo ritmo, ¿cuántos depósitos procesarán 6 oficiales en 3 horas?",
         opciones: ["280 depósitos", "320 depósitos", "360 depósitos", "400 depósitos"],
         correcta: 2,
-        explicacion: "Cada oficial procesa 160 ÷ (4 × 2) = 20 depósitos por hora. Con 6 oficiales durante 3 horas: 20 × 6 × 3 = 360 depósitos."
+        explicacion: "Cada oficial procesa 160 ÷ (4 × 2) = 20 depósitos por hora. Con 6 oficiales durante 3 horas: 20 × 6 × 3 = 360 depósitos. A mano, sin calculadora: llévalo a «un oficial en una hora»: 160 ÷ 4 = 40 por oficial en 2 horas; 40 ÷ 2 = 20 por hora. Luego 20 × 6 = 120 por hora y 120 × 3 = 360."
       },
 
       /* --- ABSTRACTO Y ESPACIAL CON SVG (6) --- */
@@ -788,7 +789,7 @@ var EXAMENES_PSICO = [
           FIG_PSICO.figura({ letra: "R", r: 0, m: true }, 64)
         ],
         correcta: 2,
-        explicacion: "La tercera opción gira la letra «R» exactamente 90° en sentido horario sin invertirla en espejo; las otras tres opciones están reflejadas horizontalmente."
+        explicacion: "La opción correcta gira la letra «R» exactamente 90° en sentido horario sin invertirla en espejo; las otras tres opciones están reflejadas (son imágenes en espejo) y no se obtienen solo girando la figura."
       },
       {
         id: "e2-18",
@@ -887,7 +888,7 @@ var EXAMENES_PSICO = [
           "DO28-BCRA-0000-0001-2948-7503-1190"
         ],
         correcta: 2,
-        explicacion: "Solo la tercera opción respeta todos los bloques sin alterar «BCAR», «0001» ni «2948»."
+        explicacion: "Solo la opción correcta respeta todos los bloques. Las otras alteran «2948» (escriben «2984»), «0001» (escriben «0010») o «BCAR» (escriben «BCRA»)."
       },
       {
         id: "e2-26",
@@ -907,6 +908,7 @@ var EXAMENES_PSICO = [
         cat: "atencion",
         enunciado: "Tres de las siguientes líneas de póliza coinciden con el patrón «POL-VH-2026-9903418-RD» y UNA difiere:\nLínea 1: POL-VH-2026-9903418-RD\nLínea 2: POL-VH-2026-9903418-RD\nLínea 3: POL-VH-2026-9903148-RD\nLínea 4: POL-VH-2026-9903418-RD\n¿En cuál línea está el error?",
         opciones: ["En la Línea 1", "En la Línea 2", "En la Línea 3", "En la Línea 4"],
+        ordenFijo: true,
         correcta: 2,
         explicacion: "En la Línea 3 aparece «9903148» en vez de «9903418» (se invirtieron los dígitos 4 y 1)."
       },
@@ -929,7 +931,7 @@ var EXAMENES_PSICO = [
           "CONSTRUCTORA HENRIQUEZ UREÑA, S. R. L. — RNC 1-30-74629-2"
         ],
         correcta: 1,
-        explicacion: "La segunda opción conserva la «H» y la tilde de «HENRÍQUEZ», las siglas «S. A.» y todos los dígitos del RNC «1-30-74629-2»."
+        explicacion: "La opción correcta conserva la «H» y la tilde de «HENRÍQUEZ», las siglas «S. A.» y todos los dígitos del RNC «1-30-74629-2». Las otras omiten la «H», invierten «46» por «64» en el RNC o quitan la tilde y cambian «S. A.» por «S. R. L.»."
       },
       {
         id: "e2-30",
@@ -1018,7 +1020,7 @@ var EXAMENES_PSICO = [
         enunciado: "Halle el término que continúa la serie intercalada: 3, 10, 6, 20, 12, 40, 24, ___",
         opciones: ["48", "60", "80", "96"],
         correcta: 2,
-        explicacion: "Hay dos series alternadas que se duplican: en posiciones impares (3, 6, 12, 24) y en posiciones pares (10, 20, 40 → 80). El octavo término es par: 40 × 2 = 80."
+        explicacion: "Hay dos series alternadas que se duplican: en posiciones impares (3, 6, 12, 24) y en posiciones pares (10, 20, 40 → 80). El octavo término es par: 40 × 2 = 80. A mano, sin calculadora: separa los números de los lugares impares (3, 6, 12, 24) de los pares (10, 20, 40). El que falta está en lugar par: 40 × 2 = 80."
       },
       {
         id: "e3-08",
@@ -1026,7 +1028,7 @@ var EXAMENES_PSICO = [
         enunciado: "La mesa de divisas compra dólares a RD$ 58.60 y los vende el mismo día a RD$ 59.85. ¿Cuál es el margen bruto cambiario al intermediar US$ 8,000.00?",
         opciones: ["RD$ 9,200.00", "RD$ 9,600.00", "RD$ 10,000.00", "RD$ 10,400.00"],
         correcta: 2,
-        explicacion: "El diferencial (spread) por cada dólar es 59.85 − 58.60 = RD$ 1.25. En US$ 8,000.00 la ganancia bruta es 8,000 × 1.25 = RD$ 10,000.00."
+        explicacion: "El diferencial (spread) por cada dólar es 59.85 − 58.60 = RD$ 1.25. En US$ 8,000.00 la ganancia bruta es 8,000 × 1.25 = RD$ 10,000.00. A mano, sin calculadora: 59.85 − 58.60 = 1.25. Multiplicar por 1.25 es sumarle su cuarta parte: 8,000 + 2,000 = 10,000."
       },
       {
         id: "e3-09",
@@ -1034,7 +1036,7 @@ var EXAMENES_PSICO = [
         enunciado: "Un inversionista coloca RD$ 400,000.00 durante 1 año exacto y recibe RD$ 44,000.00 por concepto de intereses simples brutos. ¿Qué tasa anual devengó su inversión?",
         opciones: ["9.5 % anual", "10.5 % anual", "11 % anual", "12 % anual"],
         correcta: 2,
-        explicacion: "Tasa anual = Interés ÷ Capital = 44,000 ÷ 400,000 = 0.11, equivalente al 11 % anual."
+        explicacion: "Tasa anual = Interés ÷ Capital = 44,000 ÷ 400,000 = 0.11, equivalente al 11 % anual. A mano, sin calculadora: el 1 % de 400,000 es 4,000; 44,000 ÷ 4,000 = 11, o sea 11 %."
       },
       {
         id: "e3-10",
@@ -1042,7 +1044,7 @@ var EXAMENES_PSICO = [
         enunciado: "La política crediticia fija que la suma de todas las cuotas mensuales de un deudor no supere el 35 % de su ingreso neto. Si un cliente gana RD$ 80,000.00 netos al mes y ya paga una cuota de vehículo de RD$ 9,500.00, ¿cuál es la cuota máxima de un nuevo préstamo que puede asumir?",
         opciones: ["RD$ 17,500.00", "RD$ 18,500.00", "RD$ 19,500.00", "RD$ 28,000.00"],
         correcta: 1,
-        explicacion: "Capacidad total de pago = 80,000 × 0.35 = RD$ 28,000.00. Restando la obligación vigente: 28,000 − 9,500 = RD$ 18,500.00 disponibles."
+        explicacion: "Capacidad total de pago = 80,000 × 0.35 = RD$ 28,000.00. Restando la obligación vigente: 28,000 − 9,500 = RD$ 18,500.00 disponibles. A mano, sin calculadora: el 10 % de 80,000 es 8,000; el 30 % es 24,000 y el 5 % es 4,000: 28,000 en total. 28,000 − 9,500 = 18,500."
       },
       {
         id: "e3-11",
@@ -1050,7 +1052,7 @@ var EXAMENES_PSICO = [
         enunciado: "Un suplidor descuenta una factura corporativa de RD$ 250,000.00 mediante pronto pago con un cargo financiero total del 2.4 %. ¿Qué monto líquido recibe en su cuenta?",
         opciones: ["RD$ 242,000.00", "RD$ 244,000.00", "RD$ 245,200.00", "RD$ 246,000.00"],
         correcta: 1,
-        explicacion: "Cargo financiero = 250,000 × 0.024 = RD$ 6,000.00. Monto líquido desembolsado = 250,000 − 6,000 = RD$ 244,000.00."
+        explicacion: "Cargo financiero = 250,000 × 0.024 = RD$ 6,000.00. Monto líquido desembolsado = 250,000 − 6,000 = RD$ 244,000.00. A mano, sin calculadora: el 1 % de 250,000 es 2,500. El 2 % es 5,000 y el 0.4 % es 1,000: 6,000 en total. 250,000 − 6,000 = 244,000."
       },
       {
         id: "e3-12",
@@ -1058,7 +1060,7 @@ var EXAMENES_PSICO = [
         enunciado: "Los costos de mensajería de una regional pasaron de RD$ 420,000.00 el año anterior a RD$ 483,000.00 este año. ¿Cuál fue el porcentaje exacto de incremento?",
         opciones: ["12 %", "13.5 %", "15 %", "18 %"],
         correcta: 2,
-        explicacion: "Aumento absoluto = 483,000 − 420,000 = RD$ 63,000.00. Porcentaje sobre la base inicial: 63,000 ÷ 420,000 = 0.15 = 15 %."
+        explicacion: "Aumento absoluto = 483,000 − 420,000 = RD$ 63,000.00. Porcentaje sobre la base inicial: 63,000 ÷ 420,000 = 0.15 = 15 %. A mano, sin calculadora: 483,000 − 420,000 = 63,000. El 10 % de 420,000 es 42,000 y el 5 % es 21,000; juntos dan 63,000, es decir, 15 %."
       },
 
       /* --- ABSTRACTO Y ESPACIAL CON SVG (6) --- */
@@ -1086,7 +1088,7 @@ var EXAMENES_PSICO = [
       {
         id: "e3-14",
         cat: "abstracto",
-        enunciado: "En esta matriz 3×3 la cantidad de elementos sigue una operación aritmética por fila y columna. ¿Qué celda falta?",
+        enunciado: "En esta matriz 3×3 la cantidad de elementos sigue una operación aritmética en cada fila. ¿Qué celda falta?",
         figuraHtml: FIG_PSICO.matriz([
           { s: "circulo", n: 1, f: "n" }, { s: "circulo", n: 2, f: "n" }, { s: "circulo", n: 3, f: "n" },
           { s: "circulo", n: 2, f: "n" }, { s: "circulo", n: 1, f: "n" }, { s: "circulo", n: 3, f: "n" },
@@ -1261,7 +1263,7 @@ var EXAMENES_PSICO = [
           "PH-2026-00849137-609"
         ],
         correcta: 2,
-        explicacion: "La tercera opción mantiene intactos todos los dígitos («00849173» y «609»)."
+        explicacion: "La opción correcta mantiene intactos todos los dígitos («00849173» y «609»). Las otras invierten «91» por «19» («00841973»), «09» por «90» («690») o «73» por «37» («00849137»)."
       },
       {
         id: "e3-26",
@@ -1295,7 +1297,7 @@ var EXAMENES_PSICO = [
           "NCF-B1400012805  =  NCF-B1400012805"
         ],
         correcta: 2,
-        explicacion: "En el tercer par se invirtieron las cifras «39» por «93» («76391» frente a «76931»); los otros tres pares son idénticos."
+        explicacion: "En el par «NCF-B0100076391 = NCF-B0100076931» se invirtieron las cifras «39» por «93» («76391» frente a «76931»); los otros tres pares son idénticos."
       },
       {
         id: "e3-29",
@@ -1308,7 +1310,7 @@ var EXAMENES_PSICO = [
           "Av. Gustavo Mejía Ricard #148, Ens. Piantini, D. N."
         ],
         correcta: 2,
-        explicacion: "Solo la tercera opción respeta la tilde de «Mejía», la «t» final de «Ricart» y el número «#148»."
+        explicacion: "Solo la opción correcta respeta la tilde de «Mejía», la «t» final de «Ricart» y el número «#148». Las otras quitan la tilde («Mejia»), invierten el número («#184») o terminan el apellido en «d» («Ricard»)."
       },
       {
         id: "e3-30",
@@ -1392,7 +1394,7 @@ var EXAMENES_PSICO = [
         enunciado: "¿Qué número continúa el patrón numérico?: 2, 5, 10, 17, 26, 37, ___",
         opciones: ["48", "49", "50", "52"],
         correcta: 2,
-        explicacion: "Las diferencias crecen con los números impares (+3, +5, +7, +9, +11 → sigue +13): 37 + 13 = 50 (también equivale a n² + 1: 7² + 1 = 50)."
+        explicacion: "Las diferencias crecen con los números impares (+3, +5, +7, +9, +11 → sigue +13): 37 + 13 = 50 (también equivale a n² + 1: 7² + 1 = 50). A mano, sin calculadora: anota las sumas entre un número y el siguiente (3, 5, 7, 9, 11); la próxima es 13 y 37 + 13 = 50."
       },
       {
         id: "e4-08",
@@ -1400,7 +1402,7 @@ var EXAMENES_PSICO = [
         enunciado: "Una tarjeta corporativa tiene límite total de US$ 3,000.00. Registra consumos por US$ 1,400.00 y además un pago local de RD$ 36,000.00 convertido a razón de RD$ 60.00 por dólar. ¿Cuánto disponible resta en dólares?",
         opciones: ["US$ 900.00", "US$ 1,000.00", "US$ 1,100.00", "US$ 1,240.00"],
         correcta: 1,
-        explicacion: "El consumo en pesos equivale a 36,000 ÷ 60 = US$ 600.00. Total utilizado = 1,400 + 600 = US$ 2,000.00. Disponible restante = 3,000 − 2,000 = US$ 1,000.00."
+        explicacion: "El consumo en pesos equivale a 36,000 ÷ 60 = US$ 600.00. Total utilizado = 1,400 + 600 = US$ 2,000.00. Disponible restante = 3,000 − 2,000 = US$ 1,000.00. A mano, sin calculadora: 36,000 ÷ 60 = 600 (quita un cero a cada uno: 3,600 ÷ 6). 1,400 + 600 = 2,000 y 3,000 − 2,000 = 1,000."
       },
       {
         id: "e4-09",
@@ -1408,7 +1410,7 @@ var EXAMENES_PSICO = [
         enunciado: "Un certificado de RD$ 500,000.00 rinde un 10 % anual simple. Si se retiene el 10 % de impuesto sobre los intereses generados, ¿cuánto interés NETO recibe el cliente en un semestre (6 meses)?",
         opciones: ["RD$ 20,000.00", "RD$ 22,500.00", "RD$ 25,000.00", "RD$ 45,000.00"],
         correcta: 1,
-        explicacion: "Interés bruto en 6 meses = 500,000 × 0.10 × 0.5 = RD$ 25,000.00. Retención fiscal (10 % de 25,000) = RD$ 2,500.00. Interés neto acreditado = 25,000 − 2,500 = RD$ 22,500.00."
+        explicacion: "Interés bruto en 6 meses = 500,000 × 0.10 × 0.5 = RD$ 25,000.00. Retención fiscal (10 % de 25,000) = RD$ 2,500.00. Interés neto acreditado = 25,000 − 2,500 = RD$ 22,500.00. A mano, sin calculadora: el 10 % de 500,000 es 50,000 al año; en medio año, 25,000. El impuesto es el 10 % de 25,000 = 2,500. 25,000 − 2,500 = 22,500."
       },
       {
         id: "e4-10",
@@ -1421,7 +1423,7 @@ var EXAMENES_PSICO = [
           "Sobrante de RD$ 1,500.00"
         ],
         correcta: 2,
-        explicacion: "Efectivo esperado = 1,200,000 − 845,500 = RD$ 354,500.00. Al encontrarse físicamente RD$ 356,500.00, hay RD$ 2,000.00 de más (sobrante, típico de retiro no tomado por el usuario)."
+        explicacion: "Efectivo esperado = 1,200,000 − 845,500 = RD$ 354,500.00. Al encontrarse físicamente RD$ 356,500.00, hay RD$ 2,000.00 de más (sobrante, típico de retiro no tomado por el usuario). A mano, sin calculadora: resta por partes: 1,200,000 − 800,000 = 400,000 y 400,000 − 45,500 = 354,500. Hay 356,500, así que sobran 2,000."
       },
       {
         id: "e4-11",
@@ -1429,7 +1431,7 @@ var EXAMENES_PSICO = [
         enunciado: "Auditoría revisa una muestra del 15 % sobre un lote de 800 expedientes de apertura. Si el 5 % de los expedientes auditados presentó firmas incompletas, ¿cuántos expedientes tuvieron ese hallazgo?",
         opciones: ["4 expedientes", "6 expedientes", "8 expedientes", "12 expedientes"],
         correcta: 1,
-        explicacion: "Muestra revisada = 800 × 0.15 = 120 expedientes. El 5 % de esos 120 expedientes es: 120 × 0.05 = 6 expedientes."
+        explicacion: "Muestra revisada = 800 × 0.15 = 120 expedientes. El 5 % de esos 120 expedientes es: 120 × 0.05 = 6 expedientes. A mano, sin calculadora: el 10 % de 800 es 80 y el 5 % es 40: la muestra es de 120. El 5 % de 120 es 6 (el 10 % es 12; la mitad)."
       },
       {
         id: "e4-12",
@@ -1437,7 +1439,7 @@ var EXAMENES_PSICO = [
         enunciado: "Un bono trimestral de RD$ 45,000.00 se distribuye entre dos analistas de QA en proporción directa a los módulos certificados por cada uno: 4 y 5 módulos respectivamente. ¿Cuánto recibe quien certificó 5 módulos?",
         opciones: ["RD$ 20,000.00", "RD$ 22,500.00", "RD$ 25,000.00", "RD$ 27,000.00"],
         correcta: 2,
-        explicacion: "Suma de partes proporcionales = 4 + 5 = 9 partes. Cada parte equivale a 45,000 ÷ 9 = RD$ 5,000.00. Quien certificó 5 módulos recibe 5 × 5,000 = RD$ 25,000.00."
+        explicacion: "Suma de partes proporcionales = 4 + 5 = 9 partes. Cada parte equivale a 45,000 ÷ 9 = RD$ 5,000.00. Quien certificó 5 módulos recibe 5 × 5,000 = RD$ 25,000.00. A mano, sin calculadora: 4 + 5 = 9 partes. 45,000 ÷ 9 = 5,000 por parte y 5,000 × 5 = 25,000."
       },
 
       /* --- ABSTRACTO Y ESPACIAL CON SVG (6) --- */
@@ -1520,7 +1522,7 @@ var EXAMENES_PSICO = [
           FIG_PSICO.figura({ letra: "F", r: 270, m: false }, 64)
         ],
         correcta: 2,
-        explicacion: "Las opciones 1, 2 y 4 giran la «F» 90°, 180° y 270° respectivamente en el mismo plano; la tercera opción presenta inversión especular (espejo) y no puede obtenerse solo girando la figura."
+        explicacion: "Tres de las opciones solo giran la «F» (90°, 180° y 270°) dentro del mismo plano; la opción correcta es la única que presenta inversión especular (espejo) y no puede obtenerse solo girando la figura."
       },
       {
         id: "e4-18",
@@ -1619,7 +1621,7 @@ var EXAMENES_PSICO = [
           "SHA-9f4B7c2F-8801-dK5m"
         ],
         correcta: 2,
-        explicacion: "La tercera opción coincide carácter por carácter, respetando mayúsculas, minúsculas y dígitos («9f4B7c2E-8801-dK5m»)."
+        explicacion: "La opción correcta coincide carácter por carácter, respetando mayúsculas, minúsculas y dígitos («9f4B7c2E-8801-dK5m»). Las otras cambian «8801» por «8810», la «B» por un «8» o la «E» final por una «F»."
       },
       {
         id: "e4-26",
@@ -1639,6 +1641,7 @@ var EXAMENES_PSICO = [
         cat: "atencion",
         enunciado: "En este lote de cédulas del mismo titular («001-1390745-2»), una sola copia fue mal digitada:\nCopia A: 001-1390745-2\nCopia B: 001-1390754-2\nCopia C: 001-1390745-2\nCopia D: 001-1390745-2\n¿Cuál copia contiene el error?",
         opciones: ["La Copia A", "La Copia B", "La Copia C", "La Copia D"],
+        ordenFijo: true,
         correcta: 1,
         explicacion: "La Copia B invierte los dígitos «45» por «54» («001-1390754-2»)."
       },
@@ -1661,13 +1664,14 @@ var EXAMENES_PSICO = [
           "FARMACÉUTICA DEL CIBAO, S. A. — CTA. 109-482037-5"
         ],
         correcta: 2,
-        explicacion: "La tercera opción mantiene la tilde de «FARMACÉUTICA», la sigla «S. R. L.» y la cuenta exacta «109-482037-5»."
+        explicacion: "La opción correcta mantiene la tilde de «FARMACÉUTICA», la sigla «S. R. L.» y la cuenta exacta «109-482037-5». Las otras quitan la tilde, invierten «03» por «30» en la cuenta o cambian «S. R. L.» por «S. A.»."
       },
       {
         id: "e4-30",
         cat: "atencion",
-        enunciado: "Verifique las cinco conciliaciones e indique en CUÁL fila existe una discrepancia:\nFila A:  RNC 1-01-55209-4   —   RD$ 88,412.60   =   RD$ 88,412.60\nFila B:  RNC 1-31-90472-1   —   RD$ 154,009.15  =   RD$ 154,009.15\nFila C:  RNC 1-05-33816-7   —   RD$ 720,590.40  =   RD$ 720,950.40\nFila D:  RNC 1-30-11984-2   —   RD$ 19,875.00   =   RD$ 19,875.00",
+        enunciado: "Verifique las cuatro conciliaciones e indique en CUÁL fila existe una discrepancia:\nFila A:  RNC 1-01-55209-4   —   RD$ 88,412.60   =   RD$ 88,412.60\nFila B:  RNC 1-31-90472-1   —   RD$ 154,009.15  =   RD$ 154,009.15\nFila C:  RNC 1-05-33816-7   —   RD$ 720,590.40  =   RD$ 720,950.40\nFila D:  RNC 1-30-11984-2   —   RD$ 19,875.00   =   RD$ 19,875.00",
         opciones: ["En la Fila A", "En la Fila B", "En la Fila C", "En la Fila D"],
+        ordenFijo: true,
         correcta: 2,
         explicacion: "En la Fila C difieren las centenas: RD$ 720,590.40 a la izquierda frente a RD$ 720,950.40 a la derecha."
       }

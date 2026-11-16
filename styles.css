@@ -2002,3 +2002,370 @@ code {
   flex-wrap: wrap;
   margin-top: 1.1rem;
 }
+
+/* =========================================================
+   V2 · Pruebas añadidas: dominó, formatos de letras,
+   comprobación rápida, palabra mal escrita y dictado de cifras
+   ========================================================= */
+.insignia-nuevo {
+  display: inline-block;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--ambar-100);
+  color: var(--ambar-700);
+  border: 1px solid var(--ambar-500);
+  padding: 0.05rem 0.42rem;
+  border-radius: 999px;
+  margin-left: 0.3rem;
+  vertical-align: middle;
+}
+
+/* ---- Información de la evaluación ---- */
+.tarjeta-info-evaluacion {
+  border-left: 4px solid var(--indigo-600);
+  margin-bottom: 1rem;
+}
+
+.info-eval-cabecera h4 {
+  margin: 0 0 0.3rem;
+  font-size: 1.08rem;
+}
+
+.info-eval-cabecera p {
+  margin: 0 0 0.9rem;
+  color: var(--texto-secundario);
+  font-size: 0.9rem;
+}
+
+.lista-info-eval {
+  margin: 0;
+  padding-left: 1.3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0.6rem 2rem;
+}
+
+.lista-info-eval li {
+  padding-left: 0.2rem;
+}
+
+.lista-info-eval li::marker {
+  font-weight: 800;
+  color: var(--indigo-700);
+}
+
+.lista-info-eval li > div,
+.lista-info-eval li > button {
+  vertical-align: top;
+}
+
+.info-eval-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin-bottom: 0.4rem;
+}
+
+.info-eval-texto span {
+  color: var(--texto-secundario);
+  font-size: 0.88rem;
+}
+
+.info-eval-fuentes {
+  margin: 1rem 0 0;
+  font-size: 0.82rem;
+  color: var(--texto-tenue);
+}
+
+.info-eval-fuentes a {
+  color: var(--indigo-700);
+}
+
+/* ---- Fichas de dominó ---- */
+.fila-domino {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.cuadro-domino {
+  display: grid;
+  justify-content: center;
+  gap: 0.6rem 0.9rem;
+}
+
+.svg-domino {
+  flex: 0 0 auto;
+}
+
+/* ---- Formatos de preguntas de letras ---- */
+.rejilla-tipos-letras {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tarjeta-tipo-letra {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 1.15rem 1.2rem;
+  box-shadow: var(--sombra-suave);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tarjeta-tipo-letra .btn {
+  margin-top: auto;
+}
+
+.tipo-letra-cabecera {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.tipo-letra-cabecera h3 {
+  margin: 0;
+  font-size: 1.02rem;
+}
+
+.tipo-letra-num {
+  flex: 0 0 auto;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  background: var(--indigo-700);
+  color: #ffffff;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tipo-letra-ejemplo {
+  margin: 0;
+  font-size: 0.92rem;
+  background: var(--superficie-suave);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-peq);
+  padding: 0.65rem 0.8rem;
+}
+
+/* ---- Comprobación rápida ---- */
+.tabla-comp {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-peq);
+  overflow: hidden;
+}
+
+.fila-comp {
+  display: grid;
+  grid-template-columns: 2.6rem minmax(0, 1fr) minmax(0, 1fr) 13.5rem;
+  gap: 0.8rem;
+  align-items: center;
+  padding: 0.5rem 0.8rem;
+  border-top: 1px solid var(--borde);
+  background: var(--superficie);
+}
+
+.fila-comp:first-child {
+  border-top: none;
+}
+
+.fila-comp:nth-child(odd) {
+  background: var(--superficie-suave);
+}
+
+.fila-comp-cabecera,
+.fila-comp-cabecera:nth-child(odd) {
+  background: var(--marino-900);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.fila-comp.respondida {
+  box-shadow: inset 3px 0 0 var(--indigo-600);
+}
+
+.comp-num {
+  font-weight: 700;
+  color: var(--texto-tenue);
+}
+
+.comp-texto {
+  font-family: Consolas, "Cascadia Mono", "SFMono-Regular", Menlo, monospace;
+  font-size: 0.93rem;
+  overflow-wrap: anywhere;
+}
+
+.comp-texto mark,
+.tabla-comp mark {
+  background: var(--ambar-100);
+  color: var(--rojo-700);
+  font-weight: 800;
+  border-radius: 3px;
+  padding: 0 0.12rem;
+}
+
+.comp-botones {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.btn-comp {
+  flex: 1 1 0;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.38rem 0.5rem;
+  border: 1.5px solid var(--borde-fuerte);
+  border-radius: var(--radio-peq);
+  background: var(--superficie);
+  color: var(--texto);
+  cursor: pointer;
+}
+
+.btn-comp:hover {
+  border-color: var(--indigo-600);
+}
+
+.btn-comp.activo {
+  background: var(--indigo-700);
+  border-color: var(--indigo-700);
+  color: #ffffff;
+}
+
+.fila-comp.comp-ok {
+  box-shadow: inset 4px 0 0 var(--esmeralda-500);
+}
+
+.fila-comp.comp-err {
+  box-shadow: inset 4px 0 0 var(--rojo-600);
+  background: var(--rojo-50);
+}
+
+.comp-veredicto {
+  font-size: 0.86rem;
+}
+
+.comp-ok .comp-veredicto {
+  color: var(--esmeralda-700);
+}
+
+.comp-err .comp-veredicto {
+  color: var(--rojo-700);
+}
+
+/* ---- Dictado de cifras ---- */
+.caja-reglas-cifras {
+  background: var(--indigo-50);
+  border: 1px solid var(--indigo-100);
+  border-radius: var(--radio-peq);
+  padding: 0.85rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.caja-reglas-cifras ul {
+  margin: 0.55rem 0 0;
+  padding-left: 1.15rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.3rem 1.6rem;
+}
+
+.ejemplo-cifra {
+  display: inline-block;
+  font-family: Consolas, "Cascadia Mono", "SFMono-Regular", Menlo, monospace;
+  font-weight: 700;
+  background: var(--superficie);
+  border: 1px solid var(--borde-fuerte);
+  border-radius: 6px;
+  padding: 0.05rem 0.5rem;
+  margin-left: 0.4rem;
+}
+
+.cifra-en-letras {
+  margin-top: 0.85rem;
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: var(--marino-900);
+}
+
+#input-cifra {
+  font-family: Consolas, "Cascadia Mono", "SFMono-Regular", Menlo, monospace;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+}
+
+.lista-pistas-cifra {
+  margin: 0.5rem 0 0;
+  padding-left: 1.15rem;
+}
+
+@media (max-width: 880px) {
+  .fila-comp {
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: 0.3rem 0.6rem;
+  }
+
+  .fila-comp-cabecera {
+    display: none;
+  }
+
+  .fila-comp .comp-num {
+    grid-row: span 3;
+    align-self: start;
+  }
+
+  .fila-comp .comp-texto::before {
+    content: attr(data-etiqueta) ": ";
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--texto-tenue);
+    text-transform: uppercase;
+  }
+
+  .fila-comp .comp-botones,
+  .fila-comp .comp-veredicto {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Seis fichas caben en una sola fila en el teléfono */
+  .fila-domino {
+    gap: 0.4rem;
+  }
+
+  .fila-domino .svg-domino {
+    width: 38px;
+    height: auto;
+  }
+}
+
+/* Recordatorio en los ejercicios de cálculo: sin calculadora */
+.aviso-a-mano {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #78350f;
+  background: var(--ambar-50);
+  border-left: 3px solid var(--ambar-500);
+  border-radius: 0 6px 6px 0;
+  padding: 0.3rem 0.7rem;
+  margin: 0 0 1rem;
+}

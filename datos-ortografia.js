@@ -505,6 +505,59 @@ La Romana|La Rromana|La Ramona|La Romána|Al inicio de palabra nunca se escribe 
 Bávaro|Bavaro|Bábaro|Bávaros|Bávaro es esdrújula: lleva tilde. Se escribe con b y luego v.
 Boca Chica|Boca Chíca|Voca Chica|Boca Shica|Boca Chica: boca con b y chica con ch, sin tilde.
 Santiago de los Caballeros|Santiago de los Cavalleros|Santiago de los Caballero|Santiago de los Cabayeros|Caballeros se escribe con b y ll, y en plural.
+Avenida Charles Sumner|Avenida Charles Summer|Avenida Charle Sumner|Avenida Charles Sunmer|Sumner (senador estadounidense) se escribe con mn: Sum-ner. No es «Summer» (verano, en inglés).
+Avenida Sabana Larga|Avenida Sábana Larga|Avenida Savana Larga|Avenida Sabana Larja|Sabana (llanura) es llana terminada en vocal: no lleva tilde. No confundir con sábana (ropa de cama). Se escribe con b.
+Calle El Conde|Calle El Comde|Calle El Conte|Calle El Condé|Conde se escribe con n antes de d y sin tilde (llana terminada en vocal).
+Calle Arzobispo Meriño|Calle Arsobispo Meriño|Calle Arzobispo Merino|Calle Arzovispo Meriño|Arzobispo se escribe con z y con b; Meriño lleva ñ.
+Calle Arzobispo Nouel|Calle Arzobispo Noel|Calle Arzobispo Nuel|Calle Arsobispo Nouel|El apellido Nouel conserva su grafía con «ou»; arzobispo, con z.
+Calle Padre Billini|Calle Padre Bilini|Calle Padre Villini|Calle Padre Billiní|Billini se escribe con b y doble l, y no lleva tilde.
+Calle Isabel la Católica|Calle Isabel la Catolica|Calle Izabel la Católica|Calle Isabel la Catolíca|Católica es esdrújula: lleva tilde en la o. Isabel se escribe con s.
+Calle Hostos|Calle Ostos|Calle Hóstos|Calle Hostoz|Hostos (por Eugenio María de Hostos) lleva h inicial, termina en s y no lleva tilde.
+Calle Santomé|Calle Santome|Calle Zantomé|Calle Santomés|Santomé es aguda terminada en vocal: lleva tilde.
+Calle Palo Hincado|Calle Palo Incado|Calle Palo Hincádo|Calle Palo Hinkado|Hincado (de hincar, clavar) lleva h inicial y se escribe con c.
+Calle Max Henríquez Ureña|Calle Max Enríquez Ureña|Calle Max Henriquez Ureña|Calle Max Henríques Ureña|Henríquez lleva h inicial, tilde y termina en z; Ureña lleva ñ.
+Calle Fantino Falco|Calle Fantino Falcó|Calle Fantíno Falco|Calle Fantino Falko|Fantino y Falco son llanas terminadas en vocal: no llevan tilde. Falco se escribe con c.
+Calle Rafael Augusto Sánchez|Calle Rafael Agusto Sánchez|Calle Rafael Augusto Sanchez|Calle Rafaél Augusto Sánchez|Augusto lleva au; Sánchez lleva tilde; Rafael es aguda terminada en l: sin tilde.
+Autopista Joaquín Balaguer|Autopista Joaquin Balaguer|Autopista Joaquín Balaguér|Autopista Juaquín Balaguer|Joaquín es aguda terminada en n: lleva tilde. Balaguer es aguda terminada en r: no lleva tilde.
+Puente Juan Bosch|Puente Juan Bosh|Puente Juan Boch|Puente Juan Bosc|El apellido Bosch termina en «sch».
+Puente Francisco J. Peynado|Puente Francisco J. Peinado|Puente Fransisco J. Peynado|Puente Francisco J. Peynádo|El apellido Peynado se escribe con y; Francisco, con c.
+Avenida Salvador Estrella Sadhalá|Avenida Salvador Estrella Sadalá|Avenida Salvador Estrella Sadhala|Avenida Salvador Estreya Sadhalá|Sadhalá lleva h después de la d y tilde en la última a (aguda terminada en vocal). Estrella se escribe con ll.
+Avenida Bartolomé Colón|Avenida Bartolome Colón|Avenida Bartolomé Colon|Avenida Vartolomé Colón|Bartolomé (aguda terminada en vocal) y Colón (aguda terminada en n) llevan tilde.
+Avenida Ulises Francisco Espaillat|Avenida Ulises Francisco Espaillad|Avenida Ulises Francisco Espayat|Avenida Ulices Francisco Espaillat|Espaillat se escribe con ll y termina en t; Ulises, con s.
+Avenida Nicolás de Ovando|Avenida Nicolas de Ovando|Avenida Nicolás de Obando|Avenida Nicólas de Ovando|Nicolás es aguda terminada en s: lleva tilde en la a. Ovando se escribe con v.
+Avenida Francisco del Rosario Sánchez|Avenida Francisco del Rosario Sanchez|Avenida Francisco del Rozario Sánchez|Avenida Francisco del Rosario Sánches|Sánchez lleva tilde y termina en z; Rosario se escribe con s.
+Avenida Pedro Livio Cedeño|Avenida Pedro Libio Cedeño|Avenida Pedro Livio Cedeno|Avenida Pedro Livio Sedeño|Livio se escribe con v; Cedeño, con c inicial y ñ.
+Avenida Albert Thomas|Avenida Albert Tomas|Avenida Alber Thomas|Avenida Albert Thomás|Albert Thomas conserva su grafía original: Albert termina en t y Thomas lleva th, sin tilde.
+Avenida Los Restauradores|Avenida Los Restauradorez|Avenida Los Restoradores|Avenida Los Restauradóres|Restauradores viene de restaurar: lleva au, termina en -es y no lleva tilde.
+Avenida República de Colombia|Avenida Republica de Colombia|Avenida República de Colonbia|Avenida República de Columbia|República es esdrújula: lleva tilde. Colombia se escribe con o y con m antes de b (no «Columbia»).
+Avenida Jiménez Moya|Avenida Jimenez Moya|Avenida Giménez Moya|Avenida Jiménes Moya|Jiménez se escribe con j, lleva tilde (llana terminada en z) y termina en z.
+Avenida Paseo de los Locutores|Avenida Paseo de los Locutorez|Avenida Paceo de los Locutores|Avenida Paseo de los Locutóres|Paseo se escribe con s; locutores es llana terminada en s: no lleva tilde.
+Avenida Cayetano Germosén|Avenida Cayetano Germosen|Avenida Cayetano Jermosén|Avenida Calletano Germosén|Germosén se escribe con g y lleva tilde (aguda terminada en n); Cayetano, con y.
+Autopista 6 de Noviembre|Autopista 6 de Nobiembre|Autopista 6 de Novienbre|Autopista 6 de Nobienbre|Noviembre se escribe con v y con m antes de b.
+Autovía del Este|Autovia del Este|Autobía del Este|Autovía del Éste|Autovía lleva tilde por hiato (au-to-ví-a) y se escribe con v; «este» (punto cardinal) no lleva tilde.
+Piantini|Piantiní|Piantinni|Piantiny|Piantini es llana terminada en vocal: no lleva tilde. Termina en i latina y lleva una sola n.
+Arroyo Hondo|Arrollo Hondo|Arroyo Ondo|Aroyo Hondo|Arroyo se escribe con rr y con y; Hondo (profundo) lleva h.
+Los Cacicazgos|Los Casicazgos|Los Cacicasgos|Los Cacicazgo|Cacicazgo viene de cacique: se escribe con c en las dos primeras sílabas y con z antes de la g.
+Bella Vista|Beya Vista|Vella Vista|Bella Bista|Bella se escribe con b y ll; Vista, con v.
+Ensanche Quisqueya|Ensanche Kiskeya|Ensanche Quisquella|Enzanche Quisqueya|Quisqueya se escribe con qu en las dos sílabas y con y; ensanche, con s.
+Villa Mella|Villa Meya|Billa Mella|Villa Mela|Villa se escribe con v y ll; Mella, con ll.
+Los Alcarrizos|Los Alcarrisos|Los Alcarizos|Los Alcarrizo|Alcarrizos lleva rr y z, y va en plural.
+Bajos de Haina|Bajos de Aina|Bajos de Jaina|Vajos de Haina|Haina se escribe con h inicial; Bajos, con b y j.
+San Cristóbal|San Cristobal|San Cristóval|Sam Cristóbal|Cristóbal es llana terminada en l: lleva tilde. Se escribe con b.
+Baní|Bani|Vaní|Banní|Baní es aguda terminada en vocal: lleva tilde. Se escribe con b.
+Jarabacoa|Jaravacoa|Harabacoa|Jarabacóa|Jarabacoa se escribe con j y con b, y no lleva tilde.
+Constanza|Constansa|Costanza|Constánza|Constanza lleva n antes de la s y termina en -anza, con z.
+Cotuí|Cotui|Cotuy|Kotuí|Cotuí es aguda terminada en vocal: lleva tilde en la í.
+San Francisco de Macorís|San Francisco de Macoris|San Fransisco de Macorís|San Francisco de Macoríz|Macorís es aguda terminada en s: lleva tilde. Francisco se escribe con c.
+Dajabón|Dajabon|Dajavón|Dagabón|Dajabón es aguda terminada en n: lleva tilde. Se escribe con j y con b.
+Hato Mayor|Ato Mayor|Hato Mallor|Hato Mayór|Hato lleva h; Mayor se escribe con y y sin tilde (aguda terminada en r).
+Jimaní|Jimani|Gimaní|Jimaný|Jimaní es aguda terminada en vocal: lleva tilde. Se escribe con j.
+Sosúa|Sosua|Sozúa|Sosuá|Sosúa lleva tilde en la ú por hiato (so-sú-a). Se escribe con s.
+Las Terrenas|Las Terenas|Las Terrénas|Las Terrenaz|Terrenas se escribe con rr y sin tilde (llana terminada en s).
+San Juan de la Maguana|San Juan de la Magüana|San Juan de la Maguána|San Juan de la Mahuana|Maguana se escribe con gu: ante a, la u suena sin necesidad de diéresis. No lleva tilde.
+Monseñor Nouel|Monseñor Noel|Monsenor Nouel|Monseñor Nuel|Monseñor lleva ñ; Nouel conserva su grafía con «ou».
+Elías Piña|Elias Piña|Elías Pina|Elíaz Piña|Elías lleva tilde por hiato (e-lí-as); Piña lleva ñ.
+Villa Altagracia|Villa Altagrasia|Villa Alta Gracia|Billa Altagracia|Altagracia se escribe en una sola palabra y con c.
 `;
 
 /* Convierte los datos en una lista de preguntas */
