@@ -51,6 +51,25 @@
     return (m < 10 ? "0" : "") + m + ":" + (r < 10 ? "0" : "") + r;
   }
 
+  /* Letras de las opciones (hasta 6 por si una pregunta trae 5 o 6 alternativas) */
+  var LETRAS_OPCION = ["A", "B", "C", "D", "E", "F"];
+
+  /* Devuelve una copia de la pregunta con sus opciones barajadas y el índice
+     correcto recalculado. Así la respuesta no queda siempre en la misma letra
+     (en la V1 casi nunca caía en la D). Las preguntas marcadas con
+     ordenFijo: true (Línea 1-4, Fila A-D, Oficina 1-4…) conservan su orden. */
+  function barajarOpcionesPregunta(p) {
+    if (!p || !Array.isArray(p.opciones) || p.ordenFijo) return p;
+    var indices = mezclar(p.opciones.map(function (_, i) { return i; }));
+    var copia = {};
+    for (var k in p) {
+      if (Object.prototype.hasOwnProperty.call(p, k)) copia[k] = p[k];
+    }
+    copia.opciones = indices.map(function (i) { return p.opciones[i]; });
+    copia.correcta = indices.indexOf(p.correcta);
+    return copia;
+  }
+
   function estadoInicialProgreso() {
     return {
       ortoCat: {},
@@ -58,7 +77,9 @@
       erroresOrto: {},
       correosCompletados: {},
       historialExamenes: [],
-      perfilLaboral: null
+      perfilLaboral: null,
+      /* Estadísticas de las pruebas añadidas en la V2 (cifras, comprobación, dominó) */
+      extras: {}
     };
   }
 
@@ -224,6 +245,7 @@
     } else if (nombreVista === "progreso") {
       renderizarPanelProgreso();
     }
+    avisarCambio("app:vista", nombreVista);
     window.scrollTo(0, 0);
   }
 
@@ -353,7 +375,7 @@
     var estado = {
       preguntas: config.preguntas.map(function (p) {
         if (p.opciones) {
-          return p;
+          return config.barajarOpciones === false ? p : barajarOpcionesPregunta(p);
         }
         /* Convierte pregunta de ortografía a estructura estándar de 4 opciones */
         var mezcladas = mezclar([p.correcta].concat(p.incorrectas));
@@ -442,9 +464,9 @@
         var ok = elegida === p.correcta;
         var txtElegida = elegida === undefined
           ? "Sin responder"
-          : (p.esOpcionHtml ? "Opción " + ["A", "B", "C", "D"][elegida] : esc(p.opciones[elegida]));
+          : (p.esOpcionHtml ? "Opción " + LETRAS_OPCION[elegida] : esc(p.opciones[elegida]));
         var txtCorrecta = p.esOpcionHtml
-          ? "Opción " + ["A", "B", "C", "D"][p.correcta] + '<div style="margin-top:0.35rem">' + p.opciones[p.correcta] + "</div>"
+          ? "Opción " + LETRAS_OPCION[p.correcta] + '<div style="margin-top:0.35rem">' + p.opciones[p.correcta] + "</div>"
           : esc(p.opciones[p.correcta]);
 
         return '<div class="revision-item ' + (ok ? "rev-ok" : "rev-err") + '">' +
@@ -475,7 +497,9 @@
       var p = estado.preguntas[estado.indice];
       var respActual = estado.respuestas[estado.indice];
       var yaRespondida = respActual !== undefined;
-      var letras = ["A", "B", "C", "D"];
+      /* Cuando las respuestas son letras (formatos de letras), las opciones se
+         rotulan con números para no confundir «opción B» con «respuesta B». */
+      var letras = p.etiquetasNumericas ? ["1", "2", "3", "4", "5", "6"] : LETRAS_OPCION;
       var respondidasCount = Object.keys(estado.respuestas).length;
 
       var opcionesHtml = p.opciones.map(function (op, i) {
@@ -533,6 +557,8 @@
         '<div class="quiz-tarjeta-pregunta">' +
           (p.catNombre || p.tema ? '<span class="insignia-cat">' + esc(p.catNombre || p.tema) + "</span>" : "") +
           '<div class="' + claseEnunciado + '">' + esc(p.enunciado || p.situacion) + "</div>" +
+          /* En la prueba real no se permite calculadora: se recuerda en cada ejercicio de cálculo */
+          (p.cat === "numerico" ? '<div class="aviso-a-mano">Resuélvelo con lápiz y papel, sin calculadora, como en la prueba.</div>' : "") +
           (p.figuraHtml ? '<div class="contenedor-figura-pregunta">' + p.figuraHtml + "</div>" : "") +
           '<div class="lista-opciones-quiz' + (p.esOpcionHtml ? " opciones-svg-grid" : "") + '">' + opcionesHtml + "</div>" +
           feedbackHtml +
@@ -618,16 +644,37 @@
       botones[i].classList.toggle("activo", botones[i].getAttribute("data-submodo") === submodo);
     }
 
-    $("orto-panel-categorias").classList.toggle("oculto", submodo !== "categorias");
-    $("orto-panel-examen-intro").classList.toggle("oculto", submodo !== "examen");
-    $("orto-panel-correos").classList.toggle("oculto", submodo !== "correos");
-    $("orto-panel-dictado").classList.toggle("oculto", submodo !== "dictado");
-    $("orto-panel-errores").classList.toggle("oculto", submodo !== "errores");
+    /* Cada submodo muestra su panel; los paneles nuevos (V2) solo existen si
+       index.html los declara, por eso se comprueba antes de alternarlos. */
+    var paneles = {
+      categorias: "orto-panel-categorias",
+      examen: "orto-panel-examen-intro",
+      malescrita: "orto-panel-malescrita",
+      correos: "orto-panel-correos",
+      dictado: "orto-panel-dictado",
+      cifras: "orto-panel-cifras",
+      errores: "orto-panel-errores"
+    };
+    Object.keys(paneles).forEach(function (clave) {
+      var panel = $(paneles[clave]);
+      if (panel) panel.classList.toggle("oculto", submodo !== clave);
+    });
 
     if (submodo === "categorias") renderizarCategoriasOrto();
     if (submodo === "correos") renderizarVistaCorreos();
     if (submodo === "dictado") asegurarSesionDictado();
     if (submodo === "errores") renderizarPanelErrores();
+
+    avisarCambio("orto:submodo", submodo);
+  }
+
+  /* Aviso para los módulos de app-extras.js (dominó, cifras, comprobación…) */
+  function avisarCambio(nombre, detalle) {
+    try {
+      document.dispatchEvent(new CustomEvent(nombre, { detail: detalle }));
+    } catch (e) {
+      /* Navegadores muy antiguos sin CustomEvent: los extras simplemente no se enteran */
+    }
   }
 
   $("submodos-ortografia").addEventListener("click", function (ev) {
@@ -1239,7 +1286,7 @@
       var est = progreso.psicoCat[cat.id] || { aciertos: 0, total: 0 };
       var dom = est.total > 0
         ? "Precisión: " + Math.round((est.aciertos / est.total) * 100) + " % (" + est.aciertos + "/" + est.total + ")"
-        : "24 ejercicios guiados";
+        : n + " ejercicios guiados";
 
       return '<div class="tarjeta-examen-psico">' +
         '<div class="cat-fila-sup"><h4>' + esc(cat.nombre) + '</h4><span class="cat-conteo">' + n + "</span></div>" +
@@ -1297,7 +1344,8 @@
     var catId = btn.getAttribute("data-practicar-psico-cat");
     var catObj = CATEGORIAS_PSICO.filter(function (c) { return c.id === catId; })[0];
     var pregs = mezclar(TODAS_PSICO.filter(function (p) { return p.cat === catId; })).map(function (p) {
-      p.catNombre = catObj ? catObj.nombre : catId;
+      /* Las preguntas de letras ya traen su etiqueta «Formato N · …»: se conserva */
+      if (!p.catNombre) p.catNombre = catObj ? catObj.nombre : catId;
       return p;
     });
 
@@ -1786,6 +1834,33 @@
     renderizarInicioPsicometria();
     renderizarSeccionPsicologia();
   }
+
+  /* ---------------------------------------------------------
+     Interfaz mínima para app-extras.js (pruebas añadidas en la V2:
+     dominó, preguntas de letras, comprobación, dictado de cifras
+     y «palabra mal escrita»). Solo expone lo que esos módulos usan.
+     --------------------------------------------------------- */
+  window.APP_BANCA = {
+    $: $,
+    esc: esc,
+    mezclar: mezclar,
+    formatearSegundos: formatearSegundos,
+    iniciarMotorQuiz: iniciarMotorQuiz,
+    detenerTemporizador: detenerTemporizador,
+    registrarResultadoOrto: registrarResultadoOrto,
+    registrarResultadoPsico: registrarResultadoPsico,
+    cambiarSubmodoOrto: cambiarSubmodoOrto,
+    renderizarInicioPsicometria: renderizarInicioPsicometria,
+    obtenerBancoOrto: function () { return BANCO_ORTO; },
+    obtenerTodasPsico: function () { return TODAS_PSICO; },
+    obtenerProgreso: function () { return progreso; },
+    guardarProgreso: guardarProgreso,
+    registrarSimulacro: function (entrada) {
+      progreso.historialExamenes.unshift(entrada);
+      progreso.historialExamenes = progreso.historialExamenes.slice(0, 25);
+      guardarProgreso();
+    }
+  };
 
   iniciarAplicacion();
 })();

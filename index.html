@@ -59,7 +59,7 @@
         <div>
           <span class="etiqueta-seccion">Norma RAE (2010) · Contexto Corporativo RD</span>
           <h2>Reglas ortográficas, trucos de memoria y redacción ejecutiva</h2>
-          <p>Consulta cualquier duda al instante: el buscador revisa tanto las 12 guías prácticas como las más de 450 palabras, oraciones y avenidas dominicanas del banco.</p>
+          <p>Consulta cualquier duda al instante: el buscador revisa tanto las 12 guías prácticas como las más de 500 palabras, oraciones, avenidas y lugares dominicanos del banco.</p>
         </div>
         <div class="buscador-caja">
           <label for="input-buscar-dudas" class="sr-only">Buscar palabra, avenida o regla ortográfica</label>
@@ -98,8 +98,10 @@
       <div class="barra-submodos" id="submodos-ortografia">
         <button type="button" class="submodo-btn activo" data-submodo="categorias">Por categoría (11)</button>
         <button type="button" class="submodo-btn" data-submodo="examen">Examen 40 preg. / 30 min</button>
+        <button type="button" class="submodo-btn" data-submodo="malescrita">Palabra mal escrita <span class="insignia-nuevo">Nuevo</span></button>
         <button type="button" class="submodo-btn" data-submodo="correos">Detecta errores en el correo (28)</button>
         <button type="button" class="submodo-btn" data-submodo="dictado">Escritura en contexto</button>
+        <button type="button" class="submodo-btn" data-submodo="cifras">Dictado de cifras <span class="insignia-nuevo">Nuevo</span></button>
         <button type="button" class="submodo-btn" data-submodo="errores">Repaso de mis errores <span class="contador-pill" id="pill-errores-orto">0</span></button>
       </div>
 
@@ -137,6 +139,59 @@
           <div class="acciones-fila">
             <button type="button" id="btn-iniciar-examen-orto" class="btn btn-primario btn-grande">Comenzar examen (30:00 min)</button>
           </div>
+        </div>
+      </div>
+
+      <!-- Subvista 2B-bis (V2): Encuentra la palabra MAL escrita -->
+      <div id="orto-panel-malescrita" class="subpanel-orto oculto">
+        <div class="tarjeta tarjeta-destacada">
+          <span class="etiqueta-seccion">Formato inverso · como en la prueba</span>
+          <h2>Encuentra la palabra MAL escrita</h2>
+          <p>En el resto de la práctica eliges la forma correcta entre cuatro. Aquí es al revés: <strong>tres opciones están bien escritas y una sola tiene el error</strong>. Es el formato de «identifica cuál está mal» y obliga a revisar las cuatro con calma.</p>
+          <ul class="lista-detalles-examen">
+            <li><strong>Palabras:</strong> tildes, B/V, C/S/Z, H, LL/Y, G/J y C/Q/K mezcladas.</li>
+            <li><strong>Calles y lugares de RD:</strong> cuatro avenidas, calles o ciudades; una está mal escrita.</li>
+            <li><strong>Truco:</strong> lee cada opción sílaba por sílaba; el error suele ser una tilde que sobra o falta, o una sola letra cambiada.</li>
+          </ul>
+          <div class="acciones-fila">
+            <button type="button" class="btn btn-primario" data-malescrita="palabras">Palabras (20 preguntas)</button>
+            <button type="button" class="btn btn-primario" data-malescrita="rd">Calles y lugares de RD (15)</button>
+            <button type="button" class="btn btn-secundario" data-malescrita="mixto">Mixto (25)</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subvista 2D-bis (V2): Dictado de cifras -->
+      <div id="orto-panel-cifras" class="subpanel-orto oculto">
+        <div class="tarjeta">
+          <div class="cabecera-bloque">
+            <div>
+              <span class="etiqueta-seccion">Montos dictados · RD$ y US$</span>
+              <h2>Dictado de cifras</h2>
+              <p>Escucha el monto (o léelo en letras) y escríbelo en números con su <strong>moneda</strong>, sus <strong>comas</strong> en los miles y su <strong>punto</strong> en los centavos.</p>
+            </div>
+            <div class="acciones-fila">
+              <label for="select-nivel-cifras" class="sr-only">Nivel del dictado</label>
+              <select id="select-nivel-cifras" class="select-control">
+                <option value="1">Básico (hasta 99,999)</option>
+                <option value="2" selected>Intermedio (cientos de miles)</option>
+                <option value="3">Avanzado (millones y ceros)</option>
+              </select>
+              <button type="button" id="btn-nueva-tanda-cifras" class="btn btn-secundario">Nueva tanda (10)</button>
+            </div>
+          </div>
+          <div class="caja-reglas-cifras">
+            <strong>Formato que se espera:</strong>
+            <span class="ejemplo-cifra">RD$ 1,250,300.50</span>
+            <span class="ejemplo-cifra">US$ 4,075.25</span>
+            <ul>
+              <li><strong>Moneda primero:</strong> «pesos» → <code>RD$</code>; «dólares» → <code>US$</code>.</li>
+              <li><strong>Coma (,)</strong> cada tres cifras: miles y millones.</li>
+              <li><strong>Punto (.)</strong> antes de los centavos, siempre con dos cifras: «con cinco centavos» → <code>.05</code>.</li>
+              <li>Si no dictan centavos, puedes escribir <code>.00</code> o dejarlo sin decimales.</li>
+            </ul>
+          </div>
+          <div id="zona-cifras"></div>
         </div>
       </div>
 
@@ -277,17 +332,45 @@
       <div id="psico-inicio">
         <div class="hero-seccion">
           <div>
-            <span class="etiqueta-seccion">120 preguntas únicas · 5 aptitudes clave</span>
+            <span class="etiqueta-seccion">160 preguntas fijas + dominó ilimitado · 7 aptitudes</span>
             <h2>Pruebas Psicométricas para Bancos y Empresas en RD</h2>
-            <p>Practica con <strong>4 simulacros cronometrados completos de 30 preguntas</strong> cada uno o entrena sin reloj por habilidad específica (incluyendo matrices SVG, dados, divisas RD$/US$, cuadre de caja y verificación de cédulas y RNC).</p>
+            <p>Practica con <strong>4 simulacros cronometrados completos de 30 preguntas</strong> cada uno o entrena sin reloj por habilidad específica (incluyendo matrices SVG, dados, divisas RD$/US$, cuadre de caja y verificación de cédulas y RNC). Ahora también: <strong>series de dominó</strong>, <strong>preguntas de letras</strong> y <strong>comprobación rápida de nombres</strong>.</p>
           </div>
         </div>
+
+        <!-- V2: pruebas que reportan los candidatos -->
+        <h3 class="subtitulo-bloque">Pruebas que reportan los candidatos <span class="insignia-nuevo">Nuevo</span></h3>
+        <div class="tarjeta tarjeta-info-evaluacion" id="info-evaluacion"></div>
+        <div class="rejilla-examenes-psico" id="rejilla-extras-psico"></div>
 
         <h3 class="subtitulo-bloque">Exámenes completos cronometrados (30 preguntas cada uno)</h3>
         <div class="rejilla-examenes-psico" id="rejilla-examenes-psico"></div>
 
         <h3 class="subtitulo-bloque">Práctica guiada por habilidad (con explicación inmediata)</h3>
         <div class="rejilla-habilidades-psico" id="rejilla-habilidades-psico"></div>
+      </div>
+
+      <!-- V2: los 10 formatos de preguntas de letras -->
+      <div id="psico-panel-letras" class="oculto">
+        <div class="tarjeta tarjeta-destacada">
+          <div class="cabecera-bloque">
+            <div>
+              <span class="etiqueta-seccion">10 formatos · 4 preguntas de cada uno</span>
+              <h2>Preguntas de letras y palabras</h2>
+              <p>Son las preguntas donde te dan una palabra o una instrucción y la respuesta es <strong>una letra</strong>. Parecen confusas porque nadie las explica, pero cada formato tiene un método fijo. Practícalos todos para que ninguno te tome por sorpresa.</p>
+            </div>
+            <div class="acciones-fila">
+              <button type="button" class="btn btn-primario" data-letras-tipo="todos">Mezclar los 10 formatos (40)</button>
+              <button type="button" class="btn btn-secundario" data-volver-psico="1">← Volver</button>
+            </div>
+          </div>
+        </div>
+        <div class="rejilla-tipos-letras" id="rejilla-tipos-letras"></div>
+      </div>
+
+      <!-- V2: comprobación rápida de nombres y números -->
+      <div id="psico-panel-comprobacion" class="oculto">
+        <div class="tarjeta" id="comprobacion-contenido"></div>
       </div>
 
       <div id="psico-motor-quiz" class="motor-quiz oculto"></div>
@@ -393,10 +476,15 @@
           <div id="barras-progreso-orto" class="lista-barras-dominio"></div>
         </div>
         <div class="tarjeta">
-          <h3>Dominio por habilidad psicométrica (5)</h3>
+          <h3>Dominio por habilidad psicométrica (7)</h3>
           <div id="barras-progreso-psico" class="lista-barras-dominio"></div>
           <div id="resumen-perfil-guardado" class="resumen-perfil-mini"></div>
         </div>
+      </div>
+
+      <div class="tarjeta">
+        <h3>Pruebas de agilidad y dictado</h3>
+        <div id="progreso-extras" class="lista-barras-dominio"></div>
       </div>
 
       <div class="rejilla-dos-columnas">
@@ -472,7 +560,9 @@
   <script src="datos-ortografia.js"></script>
   <script src="datos-correos.js"></script>
   <script src="datos-psicometria.js"></script>
+  <script src="datos-psicometria-extra.js"></script>
   <script src="datos-psicologia.js"></script>
   <script src="app.js"></script>
+  <script src="app-extras.js"></script>
 </body>
 </html>
